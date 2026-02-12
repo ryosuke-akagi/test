@@ -53,3 +53,21 @@
 - ls
 - git branch -d feature
 - git branch
+
+### 1520
+- git checkout -b feature
+- echo "/* main */" | cat - main.c > tmp && mv tmp main.c
+- git add main.c
+- git commit -m "先頭行にmainを挿入"
+- git push origin feature
+- git checkout main
+- echo "//main" | cat - main.c > tmp && mv tmp main.c
+- git add main.c
+- git commit -m "先頭行にmainを挿入"
+- git push origin main
+- git merge feature
+- git add main.c
+- git commit -m "featureをmainにマージ"
+- git push origin main
+- git log
+
