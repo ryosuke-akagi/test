@@ -1,3 +1,5 @@
+// main
+/* main */
 #include <stdio.h>
 #include "message.h"
 
